@@ -29,8 +29,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="MobileMapper" id="X1B-YY-fJr">
-                        <barButtonItem key="leftBarButtonItem" title="Zoom" id="cJx-nV-HcH"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="9iH-Ce-hMx"/>
+                        <barButtonItem key="leftBarButtonItem" title="Zoom" id="cJx-nV-HcH">
+                            <connections>
+                                <action selector="whenZoomButtonPressed:" destination="BYZ-38-t0r" id="Im4-rb-LNA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="9iH-Ce-hMx">
+                            <connections>
+                                <action selector="whenSearchButtonPressed:" destination="BYZ-38-t0r" id="c65-nP-AM0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="iI2-K9-vzd" id="4LV-gc-Xqv"/>
